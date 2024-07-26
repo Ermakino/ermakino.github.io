@@ -341,3 +341,8 @@ a:hover {
 .appandroid {
     font-size: 40px;
 }
+
+.picandroid {
+    width: 75%;
+    height: auto;
+}
