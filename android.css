@@ -1,41 +1,39 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('main/Inter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-color: black;
-    font: 'Inter';
-        }
+    font-family: 'Inter', sans-serif; /* Applica il font alla pagina */
+}
 
 .container {
-            text-align: center;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
-        
 
 .header-image {
-            max-width: 100%;
-            height: auto;
+    max-width: 100%;
+    height: auto;
 }
-        
 
 h1 {
     color: #FFF;
     font-size: 1.5em;
 }
-        
 
 p {
     color: #FFF;
     font-size: 1em;
-        }
-
-@font-face {
-    font-family: 'Inter';
-    src: url('Inter.ttf') format('truetype');
-    /* Aggiungi altri formati del font se necessario */
 }
