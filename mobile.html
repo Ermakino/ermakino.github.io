@@ -6,7 +6,48 @@
     <meta name="description" content="Archivio personale del Bugliò">
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <title>Archivio Personale del Bugliò</title>
-    <link rel="stylesheet" href="android.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .header-image {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            color: #333;
+            font-size: 1.5em;
+        }
+        p {
+            color: #666;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -15,5 +56,5 @@
         <p>Al momento il sito non è disponibile per mobile. Ci stiamo lavorando</p>
         <img src="wip.png" alt="Lavori in corso" class="header-image">
     </div>
-    </body>
+</body>
 </html>
