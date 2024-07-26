@@ -1,4 +1,3 @@
-/* Stili generali */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000;
@@ -17,46 +16,67 @@ body {
     z-index: 1;
 }
 
-/* Immagine header */
 .header-image {
-    width: 100%;
+    width: 35%;
     height: auto;
-    max-width: 35%; /* Limita la larghezza massima */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 
 p {
-    font-size: 1em;
+    font-size: 18px;
     opacity: 1;
 }
 
-/* Lista */
 ul {
     padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: center; /* Center the list horizontally */
+    align-items: left; /* Center the list vertically */
 }
 
 li {
     margin-bottom: 10px;
     display: flex;
-    align-items: center;
+    align-items: center; /* Align items horizontally within each list item */
 }
 
-/* Link */
+
+ul li::before {
+    content: "•"; /* Add bullet point character */
+    margin-right: 10px; /* Adjust spacing between bullet point and text */
+}
+
+
+
 a {
     color: #81d4fa;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 18px;
 }
 
-/* Linea orizzontale */
+.apaid{
+    color: #06C258;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.apaid:hover {
+    color: #08f26e;
+}
+
+.ah1{
+    font-size: 50px;
+}
+
+a:hover {
+    color: #b3e5fc;
+}
+
 .horizontal-line {
     width: 75%;
     height: 2px;
@@ -64,10 +84,8 @@ a {
     margin: 40px auto;
 }
 
-/* Tab */
 .tabs {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 20px;
 }
@@ -78,7 +96,7 @@ a {
     cursor: pointer;
     transition: transform 0.3s ease;
     width: 100%;
-    max-width: 150px; /* Limita la larghezza massima */
+    max-width: 200px;
 }
 
 .tab img {
@@ -91,30 +109,235 @@ a {
     transform: scale(1.1);
 }
 
-/* Media Query per schermi più piccoli */
-@media (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s forwards;
+}
 
-    h1 {
-        font-size: 1.5em;
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .header-image {
-        max-width: 100%;
-    }
+.fade-in-up-delay {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 1s;
+}
 
-    .horizontal-line {
-        width: 90%;
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .tabs {
-        flex-direction: column;
-    }
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    .tab {
-        max-width: 100%;
-        margin-bottom: 10px;
+.content-section:target {
+    display: block;
+    opacity: 1;
+}
+
+.tab-content {
+    position: relative;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    opacity: 1;
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.content-section {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.content-section.fade-in {
+    display: block;
+    opacity: 1;
+}
+
+.content-section.fade-out {
+    display: block;
+    opacity: 0;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CLI */
+
+.rounded-box-CLI {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #41FF00; /* Colore del testo */
+    border: 2px solid #41FF00; /* Colore del bordo */
+    background-color: #000; /* Colore di sfondo */
+    margin-left: 20px;
+    margin-right: 10px;
+    font-family: "cmd", monospace; /* Utilizza il font "cmd.ttf" */
+    position: relative;
+    transition: all 0.3s ease; /* Aggiungi transizione per un effetto più fluido */
+}
+
+.tooltip-CLI {
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    height: auto;
+    background-color: #000000;
+    color: #41FF00;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    font-size: 16px;
+    left: 100%; /* Posiziona la casella di spiegazione a destra del testo */
+    transform: translate(10px, -50%); /* Centra la casella di spiegazione verticalmente */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Aggiungi transizione per un effetto più fluido sull'opacità e ritardo sulla visibilità */
+    border: 2px solid #41FF00; /* Bordo sottile */
+    margin-left: 10px;
+}
+
+.rounded-box-CLI:hover .tooltip-CLI {
+    visibility: visible;
+    z-index: 99;
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0s; /* Aggiungi transizione per un effetto più fluido sull'opacità */
+}
+
+.rounded-box-CLI:not(:hover) .tooltip-CLI {
+    opacity: 0;
+    z-index: 00;
+}
+
+
+
+/* GUI */
+
+.rounded-box-GUI {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #FFF; /* Colore del testo */
+    border: 2px solid #FFF; /* Colore del bordo */
+    background-color: #0000FF; /* Colore di sfondo */
+    margin-left: 10px;
+    font-family: "cmd", monospace; /* Utilizza il font "cmd.ttf" */
+    position: relative;
+    transition: all 0.3s ease; /* Aggiungi transizione per un effetto più fluido */
+}
+
+.tooltip-GUI {
+    visibility: hidden;
+    opacity: 0;
+    width: 200px;
+    background-color: #0000FF;
+    color: #FFF;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 100%; /* Posiziona la casella di spiegazione a destra del testo */
+    transform: translate(10px, -50%); /* Centra la casella di spiegazione verticalmente */
+    transition: all 0.3s ease; /* Aggiungi transizione per un effetto più fluido */
+    border: 2px solid #FFF; /* Bordo sottile */
+    margin-left: 10px
+}
+
+.rounded-box-GUI:hover .tooltip-GUI {
+    visibility: visible;
+    opacity: 1;
+}
+    
+.trattino-li {
+    margin-right: 5px;
+}
+
+.trattino-p {
+    margin-left: 5px;
+}
+
+.opensource {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s forwards;
+    color: aqua;
+    display: inline-block;
+}
+
+.paid {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 3s forwards;
+    color: #06C258;
+    display: inline-block;
+}
+
+
+.monk {
+    font-size: 10px;
+}
+
+.dsx-text {
+  background: linear-gradient(90deg, #81d4fa 50%, #06C258 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dsx-text:hover {
+  background: linear-gradient(90deg, #b3e5fc 50%, #08f26e 50%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.kbps {
+    color: #FFFF00;
+}
+
+.emoji {
+    font-family: "emoji", fantasy;
+}
+
+.appandroid {
+    font-size: 40px;
 }
