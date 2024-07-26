@@ -19,9 +19,11 @@ body {
         }
         h1 {
             color: #FFF;
+            font-size: 1.5em;
         }
         p {
             color: #FFF;
+            font-size: 1em;
         }
         @media (max-width: 600px) {
             h1 {
