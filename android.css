@@ -11,13 +11,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     background-color: black;
     font-family: 'Inter', sans-serif; /* Applica il font alla pagina */
 }
 
 .container {
     text-align: center;
+}
 
 .header-image {
     max-width: 100%;
