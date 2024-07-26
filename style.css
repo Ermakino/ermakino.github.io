@@ -113,7 +113,6 @@ a:hover {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 3s forwards;
-    text-align: center;
 }
 
 @keyframes fadeInUp {
