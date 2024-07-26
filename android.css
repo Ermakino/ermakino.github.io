@@ -1,5 +1,4 @@
 body {
-            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -22,17 +21,21 @@ body {
         h1 {
             color: #FFF;
             font-size: 1.5em;
+            font-family: 'Inter', sans-serif;
         }
         p {
             color: #FFF;
             font-size: 1em;
+            font-family: 'Inter', sans-serif;
         }
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.2em;
+                font-family: 'Inter', sans-serif;
             }
             p {
                 font-size: 0.9em;
+                font-family: 'Inter', sans-serif;
             }
             .container {
                 padding: 10px;
