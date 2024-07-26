@@ -21,8 +21,3 @@
     transform: translateY(20px);
     animation: fadeInUp 1s forwards 1s;
 }
-
-.header-image {
-    width: 35%;
-    height: auto;
-}
