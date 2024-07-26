@@ -25,14 +25,3 @@ body {
             color: #FFF;
             font-size: 1em;
         }
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.2em;
-            }
-            p {
-                font-size: 0.9em;
-            }
-            .container {
-                padding: 10px;
-            }
-        }
