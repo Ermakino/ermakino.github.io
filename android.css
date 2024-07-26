@@ -6,6 +6,7 @@ body {
             align-items: center;
             min-height: 100vh;
             background-color: #000;
+            font-family: 'cmd.ttf', sans-serif;
         }
         .container {
             text-align: center;
@@ -21,21 +22,17 @@ body {
         h1 {
             color: #FFF;
             font-size: 1.5em;
-            font-family: 'Inter', sans-serif;
         }
         p {
             color: #FFF;
             font-size: 1em;
-            font-family: 'Inter', sans-serif;
         }
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.2em;
-                font-family: 'Inter', sans-serif;
             }
             p {
                 font-size: 0.9em;
-                font-family: 'Inter', sans-serif;
             }
             .container {
                 padding: 10px;
